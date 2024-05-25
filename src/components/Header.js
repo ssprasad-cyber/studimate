@@ -1,7 +1,7 @@
 import React from 'react'
 import SMicon from './assects/studimate-icon.png'
 
-export default function Header() {
+function Header() {
   return (
     <div className=''>
         <div className='leftHead'>
@@ -19,3 +19,4 @@ export default function Header() {
     </div>
   )
 }
+export default Header;
