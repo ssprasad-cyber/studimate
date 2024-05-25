@@ -1,6 +1,8 @@
 .App {
   text-align: center;
+
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +37,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* styles.css */
+.custom-margin {
+  margin-top: -6rem; /* Assuming the default font size of 1rem */
 }

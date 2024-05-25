@@ -9,6 +9,7 @@ import ChatbotPage from './components/ChatbotPage';
 import ResourceLibraryPage from './components/ResourceLibraryPage';
 import ProfileSettingsPage from './components/ProfileSettingsPage';
 import NotFoundPage from './components/NotFoundPage';
+import Main from './components/main';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/study-tools" element={<StudyToolsPage />} />
           <Route path="/chatbot" element={<ChatbotPage />} />
