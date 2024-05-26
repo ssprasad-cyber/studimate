@@ -140,7 +140,7 @@ export default function Main() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-25">
+        <div className="mx-auto max-w-2xl py-40 sm:py-96  lg:py-40 lg:my-25">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
              Follow us on social media for updates and study tips!{' '}
@@ -150,7 +150,8 @@ export default function Main() {
               </a>
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center ">
+            
             <h1 className="text-.5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
              Empower your study journey with enriched resources
             </h1>
