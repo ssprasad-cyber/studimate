@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import smicon from './assects/studimate-icon.png';
 import backdrop from './assects/backdrop.jpeg';
 import Polygon from './Polygon';
+import VectorMbl from './assects/VectorMbl.png'
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'Features', href: '#features' },
@@ -151,7 +152,7 @@ export default function Main() {
             </div>
           </div>
           <div className="text-center ">
-            
+          <img src={VectorMbl} className="lg:hidden sm:ml-20" width="500" alt="Description of the image" />
             <h1 className="text-.5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
              Empower your study journey with enriched resources
             </h1>
