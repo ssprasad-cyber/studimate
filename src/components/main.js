@@ -1,22 +1,25 @@
-import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react';
+import { Dialog, DialogPanel } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import smicon from './assects/studimate-icon.png';
-import backdrop from './assects/backdrop.jpeg';
+import VectorMbl from './assects/VectorMbl.png';
+import Blog from './Blog';
 import Polygon from './Polygon';
-import VectorMbl from './assects/VectorMbl.png'
+import Testimonials from './Testimonials';
+import Team from './Team';
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'Features', href: '#features' },
-  { name: 'Blog', href: '#' },
-  { name: 'Support/Help', href: '#' },
+  { name: 'Blog', href: '#blog' },
+  { name: 'Team', href: '#' },
   { name: 'Testimonials', href: '#' },
-  { name: 'FAQ', href: '#' },
-]
+  { name: 'Support/Help', href: '#' },
+  { name: 'FAQ', href: '#' }
+];
 
 export default function Main() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const studimate = "./main"
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const studimate = "./main";
   const features = [
     {
       title: 'AI-Powered Assistance',
@@ -39,22 +42,19 @@ export default function Main() {
       description: 'Join our vibrant community to discuss topics, share resources, and collaborate with peers.'
     },
     {
-        title: 'Progress Tracking',
-        description: 'Monitor your learning progress and get insights to improve your study habits and performance.'
-      }
+      title: 'Progress Tracking',
+      description: 'Monitor your learning progress and get insights to improve your study habits and performance.'
+    }
   ];
+
   return (
-    <div className="bg-white " >
+    <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href={studimate} className="-m-1.5 p-1.5">
               <span className="sr-only">StudiMate</span>
-              <img
-                className="h-8 w-auto"
-                src={smicon}
-                alt="Studimate"
-              />
+              <img className="h-8 w-auto" src={smicon} alt="Studimate" />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -86,11 +86,7 @@ export default function Main() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">StudiMate</span>
-                <img
-                  className="h-8 w-auto"
-                  src={smicon}
-                  alt=""
-                />
+                <img className="h-8 w-auto" src={smicon} alt="" />
               </a>
               <button
                 type="button"
@@ -144,7 +140,7 @@ export default function Main() {
         <div className="mx-auto max-w-2xl py-40 sm:py-96  lg:py-40 lg:my-25">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-             Follow us on social media for updates and study tips!{' '}
+              Follow us on social media for updates and study tips!{' '}
               <a href="./ntg" className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Click here <span aria-hidden="true">&rarr;</span>
@@ -152,13 +148,13 @@ export default function Main() {
             </div>
           </div>
           <div className="text-center ">
-          <img src={VectorMbl} className="lg:hidden sm:ml-20" width="500" alt="Description of the image" />
+            <img src={VectorMbl} className="lg:hidden sm:ml-20" width="500" alt="Description of the image" />
             <h1 className="text-.5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-             Empower your study journey with enriched resources
+              Empower your study journey with enriched resources
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-                Unlock a world of knowledge tailored to your needs. 
-                Dive into interactive study tools and curated materials to ace your academic goals.
+              Unlock a world of knowledge tailored to your needs. 
+              Dive into interactive study tools and curated materials to ace your academic goals.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -186,34 +182,39 @@ export default function Main() {
           />
         </div>
       </div>
+      <div className="relative isolate o">
       
       <div id='features' className="py-12 bg-gray-50 z-50 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Key Features</h2>
-
-        <div className="hidden sm:grid gap-8 lg:grid-cols-3 sm:grid-cols-2 z-50 ">
-          {features.map((feature, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
-        </div>
         
-        <div className="grid grid-cols-2 gap-4 sm:hidden">
-          {features.map((feature, index) => (
-            <div key={index} className="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col justify-center items-center text-center">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-600">{feature.description}</p>
-            </div>
-          ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Key Features</h2>
+
+          <div className="hidden sm:grid gap-8 lg:grid-cols-3 sm:grid-cols-2 z-50">
+            {features.map((feature, index) => (
+              <div key={index} className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4 sm:hidden">
+            {features.map((feature, index) => (
+              <div key={index} className="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col justify-center items-center text-center">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+
+      </div>
+      <Blog />
+      <Team/>
+      <Testimonials />
       
     </div>
-    
-    </div>
-        
-     
   );
 }
