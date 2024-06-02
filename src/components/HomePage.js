@@ -1,9 +1,20 @@
-import React from 'react';
+import {React,useEffect} from 'react';
 import SearchBar from './SearchBar';
 import FeaturedContent from './FeaturedContent';
 import Header from "./Header"
+import { useNavigate } from 'react-router-dom';
+
+ 
 
 function HomePage({ loggedIn, setLoggedIn }) {
+  const navigate = useNavigate();
+
+    useEffect(() => {
+      // Check if user is not logged in, then redirect to login page
+      if (!loggedIn) {
+        navigate('/login');
+      }
+    }, [loggedIn, navigate]);
   return (
     
     <div className=''>
