@@ -84,9 +84,11 @@ function LoginPage({ setLoggedIn }) {
           <p className="p line">Or With</p>
           <div className="flex-row">
             <button className="btn google" onClick={handleGoogleLogin}>
+              {/* <Apple/> */}
               Google
             </button>
             <button className="btn apple">
+              
               Apple
             </button>
           </div>
