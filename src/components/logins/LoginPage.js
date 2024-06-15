@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth, googleProvider } from '../firebase';
+import { auth, googleProvider } from '@/firebase';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import Google from '../assects/icons8google.png';
+import Apple from '../assects/icons8-apple-30.png';
 
 function LoginPage({ setLoggedIn }) {
   const [email, setEmail] = useState('');
@@ -32,8 +34,8 @@ function LoginPage({ setLoggedIn }) {
   };
 
   return (
-    <div>
-      <div className='flex justify-start p-3'>
+    <div className='"h-screen'>
+      <div className='flex justify-start p-3 relative'>
         <a href="./">
           <button className="cursor-pointer duration-200 hover:scale-125 active:scale-100 bg-gray-200 border-0 border-gray-200 rounded-md" title="Go Back">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" className="stroke-blue-300">
@@ -42,9 +44,10 @@ function LoginPage({ setLoggedIn }) {
           </button>
         </a>
       </div>
-      <div className='flex items-center justify-center h-screen'>
+      <div className='flex items-center justify-center relative '>
         <form className="form lg:shadow-lg" onSubmit={handleLogin}>
           <div>
+            <div className='font-bold py-3 text-xl'>Login</div>
             <div className="flex-column text-left">
               <label>Email </label>
             </div>
@@ -84,11 +87,11 @@ function LoginPage({ setLoggedIn }) {
           <p className="p line">Or With</p>
           <div className="flex-row">
             <button className="btn google" onClick={handleGoogleLogin}>
-              {/* <Apple/> */}
+              <img src={Google} width={30}/>
               Google
             </button>
             <button className="btn apple">
-              
+            <img src={Apple} width={30}/>
               Apple
             </button>
           </div>

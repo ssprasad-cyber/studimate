@@ -10,8 +10,8 @@ import ResourceLibraryPage from './components/ResourceLibraryPage';
 import ProfileSettingsPage from './components/ProfileSettingsPage';
 import NotFoundPage from './components/NotFoundPage';
 import Main from './mainpage/main';
-import LoginPage from './components/LoginPage';
-import SignupPage from './components/SignupPage';
+import LoginPage from './components/logins/LoginPage';
+import SignupPage from './components/logins/SignupPage';
 import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 
